@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#8B5CF6" />
+            <stop offset="100%" stop-color="#6D28D9" />
+        </linearGradient>
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#3B82F6" />
+            <stop offset="100%" stop-color="#2563EB" />
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="4" dy="4" stdDeviation="10" flood-opacity="0.2"/>
+        </filter>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background Circle -->
+        <circle cx="400" cy="400" r="300" fill="white" filter="url(#shadow)"/>
+        <circle cx="400" cy="400" r="300" fill="url(#purpleGradient)" opacity="0.05"/>
+        <circle cx="400" cy="400" r="300" stroke="url(#purpleGradient)" stroke-width="3" fill="transparent"/>
+        
+        <!-- Brain Icon -->
+        <g transform="translate(250, 200)">
+            <path d="M150,50 C150,22.4 127.6,0 100,0 C72.4,0 50,22.4 50,50 C50,77.6 72.4,100 100,100 C127.6,100 150,77.6 150,50 Z" fill="#8B5CF6" opacity="0.2"/>
+            <path d="M120,40 C120,29 111,20 100,20 C89,20 80,29 80,40 C80,51 89,60 100,60 C111,60 120,51 120,40 Z" fill="#8B5CF6" opacity="0.6"/>
+            <path d="M100,60 L100,100 M80,40 L60,20 M120,40 L140,20 M100,20 L100,0" stroke="#8B5CF6" stroke-width="4" stroke-linecap="round"/>
+        </g>
+        
+        <!-- Task Cards -->
+        <g transform="translate(200, 320)">
+            <!-- Task Card 1 -->
+            <rect x="0" y="0" width="120" height="80" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+            <rect x="10" y="10" width="80" height="10" rx="2" fill="#E5E7EB"/>
+            <rect x="10" y="30" width="100" height="10" rx="2" fill="#E5E7EB"/>
+            <rect x="10" y="50" width="60" height="10" rx="2" fill="#E5E7EB"/>
+            <circle cx="105" cy="15" r="8" fill="#10B981"/>
+            
+            <!-- Task Card 2 -->
+            <rect x="140" y="0" width="120" height="80" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+            <rect x="150" y="10" width="80" height="10" rx="2" fill="#E5E7EB"/>
+            <rect x="150" y="30" width="100" height="10" rx="2" fill="#E5E7EB"/>
+            <rect x="150" y="50" width="60" height="10" rx="2" fill="#E5E7EB"/>
+            <circle cx="245" cy="15" r="8" fill="#EF4444"/>
+            
+            <!-- Task Card 3 -->
+            <rect x="280" y="0" width="120" height="80" rx="8" fill="white" stroke="#E5E7EB" stroke-width="2"/>
+            <rect x="290" y="10" width="80" height="10" rx="2" fill="#E5E7EB"/>
+            <rect x="290" y="30" width="100" height="10" rx="2" fill="#E5E7EB"/>
+            <rect x="290" y="50" width="60" height="10" rx="2" fill="#E5E7EB"/>
+            <circle cx="385" cy="15" r="8" fill="#F59E0B"/>
+        </g>
+        
+        <!-- Connection Lines -->
+        <path d="M300,250 L260,320 M300,250 L320,320 M300,250 L400,320" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="5,5"/>
+        
+        <!-- AI Element -->
+        <g transform="translate(450, 220)">
+            <circle cx="50" cy="50" r="40" fill="url(#blueGradient)" opacity="0.8"/>
+            <text x="50" y="58" font-family="Arial" font-size="30" font-weight="bold" fill="white" text-anchor="middle">AI</text>
+        </g>
+        
+        <!-- Connection Between Brain and AI -->
+        <path d="M350,230 C380,200 400,200 450,230" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+        
+        <!-- ClarityAI Text -->
+        <text x="400" y="550" font-family="Arial" font-size="40" font-weight="bold" fill="#8B5CF6" text-anchor="middle">ClarityAI</text>
+    </g>
+</svg>

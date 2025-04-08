@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#10B981" />
+            <stop offset="100%" stop-color="#059669" />
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="4" dy="4" stdDeviation="10" flood-opacity="0.2"/>
+        </filter>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background Circle -->
+        <circle cx="400" cy="400" r="300" fill="white" filter="url(#shadow)"/>
+        <circle cx="400" cy="400" r="300" fill="url(#greenGradient)" opacity="0.1"/>
+        <circle cx="400" cy="400" r="300" stroke="url(#greenGradient)" stroke-width="3" fill="transparent"/>
+        
+        <!-- Carrot -->
+        <path d="M320,250 C320,250 330,230 350,230 C370,230 380,250 380,250 L380,420 C380,440 350,450 350,450 C350,450 320,440 320,420 Z" fill="#F97316" />
+        <path d="M330,250 C330,250 340,240 350,240 C360,240 370,250 370,250 L370,410 C370,425 350,430 350,430 C350,430 330,425 330,410 Z" fill="#FB923C" />
+        <path d="M350,230 L350,210 C350,210 340,200 350,190 C360,180 370,190 370,190 L390,210" stroke="#059669" stroke-width="6" stroke-linecap="round"/>
+        <path d="M350,230 L350,210 C350,210 360,200 350,190 C340,180 330,190 330,190 L310,210" stroke="#059669" stroke-width="6" stroke-linecap="round"/>
+        
+        <!-- Tomato -->
+        <circle cx="480" cy="350" r="60" fill="#DC2626" />
+        <circle cx="480" cy="350" r="50" fill="#EF4444" />
+        <path d="M480,290 L480,270 C480,270 470,260 480,250 C490,240 500,250 500,250 L520,270" stroke="#059669" stroke-width="6" stroke-linecap="round"/>
+        
+        <!-- Lettuce -->
+        <path d="M250,330 C250,330 230,300 260,280 C290,260 320,290 320,290 C320,290 340,270 370,290 C400,310 380,340 380,340" stroke="#10B981" stroke-width="8" stroke-linecap="round"/>
+        <path d="M270,350 C270,350 250,320 280,300 C310,280 340,310 340,310 C340,310 360,290 390,310 C420,330 400,360 400,360" stroke="#10B981" stroke-width="8" stroke-linecap="round"/>
+        <path d="M290,370 C290,370 270,340 300,320 C330,300 360,330 360,330 C360,330 380,310 410,330 C440,350 420,380 420,380" stroke="#10B981" stroke-width="8" stroke-linecap="round"/>
+        
+        <!-- AI Bubble -->
+        <circle cx="550" cy="280" r="40" fill="#7C3AED" />
+        <text x="550" y="290" font-family="Arial" font-size="30" font-weight="bold" fill="white" text-anchor="middle">AI</text>
+        
+        <!-- Recipe Card -->
+        <g transform="translate(300, 480)">
+            <rect x="0" y="0" width="200" height="120" rx="10" fill="white" stroke="#CBD5E1" stroke-width="2"/>
+            <line x1="20" y1="30" x2="180" y2="30" stroke="#CBD5E1" stroke-width="2"/>
+            <line x1="20" y1="60" x2="180" y2="60" stroke="#CBD5E1" stroke-width="2"/>
+            <line x1="20" y1="90" x2="180" y2="90" stroke="#CBD5E1" stroke-width="2"/>
+            <circle cx="40" cy="45" r="10" fill="#10B981" opacity="0.3"/>
+            <circle cx="40" cy="75" r="10" fill="#10B981" opacity="0.3"/>
+            <circle cx="40" cy="105" r="10" fill="#10B981" opacity="0.3"/>
+        </g>
+        
+        <!-- Ingredibud Text -->
+        <text x="400" y="650" font-family="Arial" font-size="40" font-weight="bold" fill="#10B981" text-anchor="middle">Ingredibud</text>
+    </g>
+</svg>
