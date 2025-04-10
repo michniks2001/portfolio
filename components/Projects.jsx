@@ -48,7 +48,7 @@ export function Projects() {
       title: "MoodBot",
       description: "Second Place – AI Agents Hackathon: Building for Social and Marketing Use Cases. An AI-driven Discord bot using Python, monitoring user interactions and identifying distress signals across 30+ messages per hour to promote mental wellness.",
       image: "/discord-logo.svg",
-      tags: ["Python", "Discord.py", "DeepSee", "NLP", "AI"],
+      tags: ["Python", "Discord.py", "DeepSeek", "NLP", "AI"],
       achievements: [
         "Implemented sentiment analysis and toxicity detection pipelines with NLP models, achieving 92% accuracy in real-time moderation and user support",
         "Created a mental wellness challenge system, delivering over 5 unique activities, encouraging positive habits and boosting user engagement",
