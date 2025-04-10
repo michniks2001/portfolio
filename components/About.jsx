@@ -52,7 +52,7 @@ export function About() {
                     variants={itemVariants}
                   >
                     <Image 
-                      src="/profile-pic.jfif" 
+                      src="/profile-pic.jpg" 
                       alt="Samuel Michnik" 
                       fill
                       className="object-cover"
