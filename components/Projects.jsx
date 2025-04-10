@@ -89,7 +89,7 @@ export function Projects() {
     {
       title: "Best Billing Co",
       description: "Corporate website for a medical billing company, featuring professional design and functionality.",
-      image: "/bestbillingco_logo.jfif",
+      image: "/bestbillingco_logo.jpg",
       tags: ["Next.js", "Vercel", "Google reCAPTCHA", "Squarespace"],
       achievements: [
         "Designed and developed a professional corporate website with modern UI/UX principles",
