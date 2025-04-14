@@ -28,7 +28,7 @@ export function Navbar() {
   };
 
   const navItems = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '#', onClick: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
@@ -63,10 +63,10 @@ export function Navbar() {
   };
 
   const mobileMenuVariants = {
-    hidden: { opacity: 0, height: 0 },
+    hidden: { opacity: 0, y: -100 },
     visible: { 
       opacity: 1, 
-      height: "auto",
+      y: 0,
       transition: {
         duration: 0.3,
         ease: "easeInOut"
@@ -74,7 +74,7 @@ export function Navbar() {
     },
     exit: {
       opacity: 0,
-      height: 0,
+      y: -100,
       transition: {
         duration: 0.3,
         ease: "easeInOut"
@@ -96,15 +96,19 @@ export function Navbar() {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         isScrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.a 
-            href="#" 
-            className="text-xl md:text-2xl font-bold"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} 
+            className="text-xl md:text-2xl font-bold cursor-pointer"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -125,7 +129,12 @@ export function Navbar() {
                 variants={itemVariants}
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection(item.href.substring(1));
+                  if (item.onClick) {
+                    item.onClick();
+                  } else {
+                    scrollToSection(item.href.substring(1));
+                  }
+                  setIsMobileMenuOpen(false);
                 }}
               >
                 <CenterUnderline label={item.name} />
@@ -171,32 +180,35 @@ export function Navbar() {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div 
-              className="md:hidden py-4 border-t"
+              className="md:hidden fixed inset-0 top-[64px] bg-background/95 backdrop-blur-md z-[99] h-[calc(100vh-64px)] overflow-y-auto"
               variants={mobileMenuVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
             >
               <motion.nav 
-                className="flex flex-col space-y-4 pb-4"
+                className="flex flex-col space-y-4 p-6 min-h-full"
                 variants={navVariants}
                 initial="hidden"
                 animate="visible"
               >
                 {navItems.map((item, index) => (
-                  <motion.a 
+                  <motion.div
                     key={index}
-                    href={item.href}
-                    className="block py-2 text-lg font-medium hover:text-primary transition-colors"
                     variants={mobileItemVariants}
+                    className="block py-2"
                     onClick={(e) => {
                       e.preventDefault();
+                      if (item.onClick) {
+                        item.onClick();
+                      } else {
+                        scrollToSection(item.href.substring(1));
+                      }
                       setIsMobileMenuOpen(false);
-                      scrollToSection(item.href.substring(1));
                     }}
                   >
-                    {item.name}
-                  </motion.a>
+                    <CenterUnderline label={item.name} />
+                  </motion.div>
                 ))}
                 <motion.div variants={mobileItemVariants}>
                   <Button className="mt-2 w-full" size="sm" asChild>

@@ -1,17 +1,19 @@
-import { Poppins, Fira_Code } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import { AuroraBackground } from "@/components/AuroraBackground";
 import "./globals.css";
 
-const poppins = Poppins({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
-const firaCode = Fira_Code({
+const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -23,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${firaCode.variable} font-sans antialiased relative`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased relative tracking-tight`}
       >
         <AuroraBackground className="opacity-70 fixed" />
         {children}
